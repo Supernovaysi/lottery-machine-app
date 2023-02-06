@@ -1,0 +1,8 @@
+{
+  "name": "LottoPredictor",
+  "displayName": "로또 추첨기",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-8654874677279287~1181066210",
+    "ios_app_id": "ca-app-pub-8654874677279287~8063003480"
+  }
+}
