@@ -6,6 +6,7 @@ import LogScreen from './LogScreen';
 import RemoveHistoryButton from '../components/RemoveHistoryButton';
 import HistoryHeaderLeft from '../components/HistoryHeaderLeft';
 import MainPageHeader from '../components/MainPageHeader';
+import WinNumberScreen from './WinNumberScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,6 +37,15 @@ const MainTab = () => {
             <Icon name="view-stream" color={color} size={size} />
           ),
           headerRight: () => <RemoveHistoryButton />,
+        }}
+      />
+      <Tab.Screen
+        name="Win History"
+        component={WinNumberScreen}
+        options={{
+          tabBarIcon: ({color, size}) => (
+            <Icon name="star" color={color} size={size} />
+          ),
         }}
       />
     </Tab.Navigator>

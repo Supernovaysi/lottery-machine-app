@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Image} from 'react-native';
 import RollButton from '../components/RollButton';
 import LottoBallContainer from '../containers/LottoBallContainer';
 import {GAMBannerAd, BannerAdSize} from 'react-native-google-mobile-ads';
-import {AD_ID_BANNER} from '../private/consts';
+import {AD_ID_BANNER} from '../../private/consts';
 
 const MainScreen = () => {
   const unitId = AD_ID_BANNER;
@@ -12,7 +12,7 @@ const MainScreen = () => {
     <>
       <View style={styles.block}>
         <Image
-          source={require('../assets/images/MainPicture.png')}
+          source={require('../../assets/images/MainPicture.png')}
           style={styles.image}
         />
         <Text style={styles.text}>행운의 숫자</Text>
@@ -21,7 +21,7 @@ const MainScreen = () => {
       </View>
       <GAMBannerAd
         unitId={unitId}
-        sizes={[BannerAdSize.FULL_BANNER]}
+        sizes={[BannerAdSize.ANCHORED_ADAPTIVE_BANNER]}
         requestOptions={{
           requestNonPersonalizedAdsOnly: true,
         }}

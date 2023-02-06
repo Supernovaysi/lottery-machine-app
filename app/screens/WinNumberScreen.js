@@ -1,20 +1,19 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import RollHistoryContainer from '../containers/RollHistoryContainer';
+import {StyleSheet, View, Text} from 'react-native';
+import {AD_ID_BANNER} from '../../private/consts';
 import {GAMBannerAd, BannerAdSize} from 'react-native-google-mobile-ads';
-import {AD_ID_BANNER} from '../private/consts';
 
-const LogScreen = () => {
+const WinNumberScreen = () => {
   const unitId = AD_ID_BANNER;
 
   return (
     <>
       <View style={styles.block}>
-        <RollHistoryContainer />
+        <Text style={styles.text}>WinNumberScreen</Text>
       </View>
       <GAMBannerAd
         unitId={unitId}
-        sizes={[BannerAdSize.FULL_BANNER]}
+        sizes={[BannerAdSize.ANCHORED_ADAPTIVE_BANNER]}
         requestOptions={{
           requestNonPersonalizedAdsOnly: true,
         }}
@@ -26,9 +25,14 @@ const LogScreen = () => {
 const styles = StyleSheet.create({
   block: {
     flex: 1,
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
 
-export default LogScreen;
+export default WinNumberScreen;
