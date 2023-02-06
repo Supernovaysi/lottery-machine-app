@@ -9,7 +9,7 @@ const WinNumberScreen = () => {
   return (
     <>
       <View style={styles.block}>
-        <Text style={styles.text}>WinNumberScreen</Text>
+        <Text style={styles.text}>준비중...</Text>
       </View>
       <GAMBannerAd
         unitId={unitId}

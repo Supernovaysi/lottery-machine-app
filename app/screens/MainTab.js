@@ -40,7 +40,7 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Win History"
+        name="당첨 번호"
         component={WinNumberScreen}
         options={{
           tabBarIcon: ({color, size}) => (
